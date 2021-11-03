@@ -104,11 +104,11 @@ section#welcome button:hover {
 }
 
 @keyframes catchAnimation {
-  0% {top: 1%; left: 1% ; transform: rotate(0) scale(1);}
-  25% {top: 1%; left: 99%; transform: rotate(180deg) scale(0.5); transform: translate(-100%);}
-  50% {top: 99%; left: 99%; transform: rotate(180deg) scale(0.5);transform: translate(-100%, -100%);}
-  75% {top: 99%; left: 1%; transform: rotate(180deg) scale(0.5);transform: translate(0, -100%);}
-  100% {top: 1%; left: 1%; transform: rotate(360deg) scale(1);}
+  0% {top: 1%; left: 1% ;}
+  25% {top: 1%; left: 99%; transform: translate(-100%);}
+  50% {top: 99%; left: 99%; transform: translate(-100%, -100%);}
+  75% {top: 99%; left: 1%; transform: translate(0, -100%);}
+  100% {top: 1%; left: 1%;}
 }
 
 button#catchMe {
@@ -125,7 +125,11 @@ button#catchMe {
 	text-transform: uppercase;
 	color: #5cdb94;
 	animation-name: catchAnimation;
-  animation-duration: 5s;
+  	animation-duration: 10s;
 	animation-fill-mode: forwards;
 	animation-iteration-count: infinite;
+}
+
+span#score {
+	color: white;
 }
