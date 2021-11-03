@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	outline: none;
+	text-decoration: none;
+	outline: none;
+	font-family: inherit;
+	box-sizing: border-box;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+	display: block;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a img {
+	border: none;
+}
+
+button,
+a {
+	cursor: pointer;
+	color: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+button,
+input,
+textarea,
+select {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	border-radius: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	background: rgb(2,0,36);
+	background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+section {
+	min-height: 100vh;
+}
+
+@keyframes welcomeAnimation {
+  0% {background-color: #5cdb94; transform: rotate(0) scale(1);}
+  50% {background-color: #05386b; transform: rotate(180deg) scale(0.5);}
+  100% {background-color: #5cdb94; transform: rotate(360deg) scale(1);}
+}
+
+section#welcome {
+	position: relative;
+	min-height: unset;
+	width: calc(100vh - 160px);
+	height: calc(100vh - 160px);
+	margin: 80px auto;
+
+	background-color: #5cdb94;
+	box-shadow: 0 0 20px #05386b;
+	border-radius: 10px;
+	animation-name: welcomeAnimation;
+  animation-duration: 10s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+section#welcome button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	border: 4px solid #379683;
+	border-radius: 50%;
+	background-color: #05386b;
+	transform: translate(-50%, -50%);
+	transition: transform 1s;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #5cdb94;
+}
+
+section#welcome button:hover {
+/*	width: 240px;
+	height: 240px;
+	font-size: 120%;
+	border-width: 120%;*/
+	transform: translate(-50%, -50%) scale(1.2) rotate(180deg);
+}
+
+@keyframes catchAnimation {
+  0% {top: 1%; left: 1% ; transform: rotate(0) scale(1);}
+  25% {top: 1%; left: 99%; transform: rotate(180deg) scale(0.5); transform: translate(-100%);}
+  50% {top: 99%; left: 99%; transform: rotate(180deg) scale(0.5);transform: translate(-100%, -100%);}
+  75% {top: 99%; left: 1%; transform: rotate(180deg) scale(0.5);transform: translate(0, -100%);}
+  100% {top: 1%; left: 1%; transform: rotate(360deg) scale(1);}
+}
+
+button#catchMe {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	width: 100px;
+	height: 100px;
+	border: 4px solid #379683;
+	border-radius: 50%;
+	background-color: #05386b;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #5cdb94;
+	animation-name: catchAnimation;
+  animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
